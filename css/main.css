@@ -23,9 +23,9 @@ body {
 }
 
 .container {
-  width: 1280px;
+  width: 1340px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 30px;
 }
 
 /* nav */
@@ -35,11 +35,8 @@ body {
 }
 
 .nav a {
-  padding: 10px 0;
+  padding: 14px 0;
 }
-/* .nav a:hover {
-  text-decoration: underline;
-} */
 
 .top {
   display: flex;
@@ -48,6 +45,10 @@ body {
   height: 60px;
   position: relative;
   margin-bottom: 40px;
+}
+
+.bars {
+  display: none;
 }
 
 .logo {
@@ -59,7 +60,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   color: #fff;
-  background-color: black;
+  background-color: #111;
   padding: 12px 11px;
 }
 
@@ -94,13 +95,15 @@ body {
   letter-spacing: -3px;
   line-height: 1;
 }
+.slide__text h2.mo_title {
+  display: none;
+}
 
 .slide__text p {
   font-size: 18px;
-  font-family: "poppins", sans-serif;
-  font-weight: 500;
   margin: 15px 0 18px;
 }
+
 .slide__text .btn {
   width: 256px;
   height: 64px;
@@ -174,7 +177,6 @@ body {
 
 .product_02 .box .card .info h4 {
   font-size: 18px;
-  font-weight: normal;
 }
 
 .product_02 .box .card .info .price {
@@ -193,7 +195,7 @@ body {
 
 /* join */
 .join {
-  margin-bottom: 150px;
+  margin-bottom: 110px;
   margin-top: 25px;
 }
 
@@ -215,9 +217,9 @@ body {
 
 .join_info p {
   font-size: 18px;
-  /* font-family: "poppins", sans-serif; */
   margin: 14px 0 26px;
 }
+
 .join_info .btn {
   width: 256px;
   height: 64px;
@@ -276,7 +278,9 @@ body {
   gap: 16px;
   color: #111;
   font-size: 20px;
+  padding-top: 8px;
 }
+
 .social .icons a {
   background-color: #fff;
   display: flex;
@@ -286,10 +290,90 @@ body {
   height: 38px;
   border-radius: 50%;
 }
-.social .icons {
+.social .icons i {
 }
 .copyright {
   margin-top: 120px;
   font-size: 10px;
   color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: initial;
+  }
+
+  /* nav */
+  .top {
+    padding: 0 20px;
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+
+  .nav {
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.86);
+    padding-top: 120px;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  .nav a {
+    padding: 14px 0;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .bars {
+    display: block;
+    font-size: 28px;
+    z-index: 2;
+    color: #fff;
+  }
+
+  .logo {
+    font-size: 18px;
+    top: 80%;
+  }
+
+  .top_menu {
+    gap: 10px;
+  }
+
+  .slide {
+    margin-bottom: 68px;
+    height: 600px;
+    background: url(../images/shoes_m.png) no-repeat;
+    background-position: center top;
+    background-size: 120%;
+  }
+
+  .slide__text {
+    transform: translateX(-50%);
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+  }
+  .slide__text h2.mo_title {
+    display: block;
+  }
+  .slide__text h2.pc_title {
+    display: none;
+  }
+
+  .product_01,
+  .product_02,
+  .join,
+  .footer {
+    display: none;
+  }
 }
